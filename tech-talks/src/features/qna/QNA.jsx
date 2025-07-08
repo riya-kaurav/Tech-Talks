@@ -11,27 +11,27 @@ export default function QnA() {
   const submitQuestion = (e) => {
     e.preventDefault();
     if (!newQ.trim()) return;
-
-    // TODO: Integrate with backend POST /api/questions
     setQuestions([newQ, ...questions]);
     setNewQ('');
   };
 
   return (
-    <section className="space-y-6">
-      <h2 className="text-2xl font-semibold text-dark border-b border-gray-200 pb-2">❓ Interview Q&A</h2>
+    <section className="space-y-6 pt-6">
+      <h2 className="text-2xl font-semibold text-[#242424] border-b border-[#E5E7EB] pb-2">
+        ❓ Interview Q&A
+      </h2>
 
-      <form onSubmit={submitQuestion} className="flex gap-2">
+      <form onSubmit={submitQuestion} className="flex flex-col sm:flex-row gap-2">
         <input
           type="text"
           placeholder="Post a frequently asked interview question..."
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FC7C89] transition"
           value={newQ}
           onChange={(e) => setNewQ(e.target.value)}
         />
         <button
           type="submit"
-          className="bg-accent text-white px-4 py-2 rounded hover:bg-dark transition"
+          className="bg-[#FC7C89] text-white px-6 py-2 rounded hover:bg-[#e86271] transition"
         >
           Add
         </button>
@@ -41,7 +41,7 @@ export default function QnA() {
         {questions.map((q, idx) => (
           <div
             key={idx}
-            className="bg-white border border-gray-200 rounded p-3 shadow-sm text-muted text-sm"
+            className="bg-white border border-[#1F4959] rounded p-4 shadow-sm hover:shadow-md transition text-[#6B7280] text-sm"
           >
             {q}
           </div>

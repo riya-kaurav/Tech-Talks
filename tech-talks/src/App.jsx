@@ -1,36 +1,36 @@
-
-import './App.css'
-import React from 'react'
+import './App.css';
+import React from 'react';
 import Navbar from './components/Navbar';
-import SubmitExperience from './features/experiences/SubmitExperience';
-import ExperienceList from './features/experiences/ExperienceList'
-import Tips from './features/tips/Tips';
-import QnA from './features/qna/QNA';
+import { Routes, Route } from 'react-router-dom';
 
-
-
+import Home from './pages/Home';
+import Experiences from './pages/Experiences';
+import TipsPage from './pages/Tips';
+import QnAPage from './pages/QnA';
+import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
 
 function App() {
-  
-
   return (
-    
-            <div className="min-h-screen bg-white text-primary font-sans">
-      <Navbar />
-      <main className="max-w-3xl mx-auto px-4 py-10 space-y-10">
-        <p className="text-muted text-center text-lg">
-          Share and explore real-world interview stories 🚀
-        </p>
-        <SubmitExperience />
-        <ExperienceList />
-        <Tips />
-        <QnA />
+    <div className="min-h-screen bg-slate-300 text-[#242424] font-sans">
 
+
+      <Navbar />
+      <main className="max-w-3xl mx-auto px-4 py-10 space-y-14">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/experiences" element={<Experiences />} />
+          <Route path="/tips" element={<TipsPage />} />
+          <Route path="/qna" element={<QnAPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
-    </div>  
-    
+      <Footer />  {/* 👈 Add this */}
+
+    </div>
   );
 }
 
-export default App
+export default App;
+

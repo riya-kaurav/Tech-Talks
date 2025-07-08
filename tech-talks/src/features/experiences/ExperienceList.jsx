@@ -8,7 +8,7 @@ export default function ExperienceList() {
       company: 'Google',
       role: 'Frontend Intern',
       content:
-        'The interview focused mostly on JavaScript fundamentals and basic system design.I was asked to build a simple React app that fetches data from an API. I also had to explain my code and thought process during the interview. They appreciated my understanding of React hooks and state management.',
+        'The interview focused mostly on JavaScript fundamentals and basic system design. I was asked to build a simple React app that fetches data from an API. I also had to explain my code and thought process during the interview. They appreciated my understanding of React hooks and state management.',
     },
     {
       id: 2,
@@ -20,18 +20,24 @@ export default function ExperienceList() {
   ];
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-semibold text-dark mb-4">Interview Experiences</h2>
+    <section className="space-y-6 pt-6">
+      <h2 className="text-2xl font-bold text-[#242424] border-b border-[#E5E7EB] pb-2">
+        🧑‍💻 Interview Experiences
+      </h2>
+
       {dummyExperiences.map((exp) => (
         <div
           key={exp.id}
-          className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm"
+          className="bg-white rounded-lg p-5 border border-[#1F4959] shadow-sm hover:shadow-md transition duration-200"
         >
-          <h3 className="text-lg font-bold text-accent">{exp.company} — {exp.role}</h3>
-          <p className="text-muted mt-2">{exp.content}</p>
+          <h3 className="text-[#FC7C89] font-semibold text-lg">
+            {exp.company} — {exp.role}
+          </h3>
+          <p className="text-[#6B7280] mt-2 text-sm leading-relaxed">
+            {exp.content}
+          </p>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
-// This component will later be connected to the backend to fetch real experiences

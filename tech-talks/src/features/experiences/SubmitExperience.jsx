@@ -13,55 +13,59 @@ export default function SubmitExperience() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Hook up backend API call here
     console.log('Submitted Experience:', form);
     setForm({ company: '', role: '', content: '' });
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="bg-white border border-muted rounded-lg p-6 shadow space-y-4"
-    >
-      <h2 className="text-xl font-semibold text-dark mb-2">Share Your Interview Experience</h2>
+    <section className="space-y-6 pt-6">
+      <h2 className="text-2xl font-semibold text-[#242424] border-b border-[#E5E7EB] pb-2">
+        📝 Share Your Interview Experience
+      </h2>
 
-      <input
-        type="text"
-        name="company"
-        placeholder="Company"
-        className="w-full p-2 border border-gray-300 rounded"
-        value={form.company}
-        onChange={handleChange}
-        required
-      />
-
-      <input
-        type="text"
-        name="role"
-        placeholder="Role"
-        className="w-full p-2 border border-gray-300 rounded"
-        value={form.role}
-        onChange={handleChange}
-        required
-      />
-
-      <textarea
-        name="content"
-        placeholder="Your interview story..."
-        rows="5"
-        className="w-full p-2 border border-gray-300 rounded"
-        value={form.content}
-        onChange={handleChange}
-        required
-      />
-
-      <button
-        type="submit"
-        className="bg-accent text-white px-6 py-2 rounded hover:bg-dark transition"
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white border border-[#1F4959] rounded-xl p-6 shadow-md space-y-5"
       >
-        Submit
-      </button>
-    </form>
+        <input
+          type="text"
+          name="company"
+          placeholder="Company"
+          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FC7C89] transition"
+          value={form.company}
+          onChange={handleChange}
+          required
+        />
+
+        <input
+          type="text"
+          name="role"
+          placeholder="Role"
+          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FC7C89] transition"
+          value={form.role}
+          onChange={handleChange}
+          required
+        />
+
+        <textarea
+          name="content"
+          placeholder="Your interview story..."
+          rows="5"
+          className="w-full p-3 border border-gray-300 rounded resize-none focus:outline-none focus:ring-2 focus:ring-[#FC7C89] transition"
+          value={form.content}
+          onChange={handleChange}
+          required
+        />
+
+        <div className="pt-2 text-right">
+          <button
+            type="submit"
+            className="bg-[#FC7C89] text-white px-6 py-2 rounded hover:bg-[#e86271] transition"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
   );
 }
-// This component allows users to submit their interview experiences.
