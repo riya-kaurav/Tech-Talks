@@ -3,7 +3,12 @@ import './App.css'
 import React from 'react'
 import Navbar from './components/Navbar';
 import SubmitExperience from './features/experiences/SubmitExperience';
-import ExperienceList from './features/ExperienceList'
+import ExperienceList from './features/experiences/ExperienceList'
+import Tips from './features/tips/Tips';
+import QnA from './features/qna/QNA';
+
+
+
 
 
 function App() {
@@ -19,6 +24,8 @@ function App() {
         </p>
         <SubmitExperience />
         <ExperienceList />
+        <Tips />
+        <QnA />
 
       </main>
     </div>  
