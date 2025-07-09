@@ -30,9 +30,8 @@ Features include:
 
 ## 🖥️ Live Demo
 
-🔗 **Frontend**: [https://tech-talks.vercel.app](https://tech-talks.vercel.app)  
-🔗 **Backend (API)**: [https://tech-talks-1.onrender.com/api](https://tech-talks-1.onrender.com/api)
-
+🔗 **Frontend**: https://tech-talks-wheat.vercel.app/
+🔗 **Backend (API)**: https://tech-talks-1.onrender.com/ap
 > Try posting an experience or adding a question — no login required!
 
 ---
