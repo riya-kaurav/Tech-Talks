@@ -59,16 +59,16 @@ Explore TechTalks live in action:
 **Backend**
 
 
-cd backend
-pip install -r requirements.txt
-python app.py
+- cd backend
+- pip install -r requirements.txt
+- python app.py
 
 
 **Frontend**
 
-cd frontend
-npm install
-npm run dev
+- cd frontend
+- npm install
+- npm run dev
 
 
 
