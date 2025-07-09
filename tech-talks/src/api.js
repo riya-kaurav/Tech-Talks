@@ -1,5 +1,8 @@
 const BASE = import.meta.env.VITE_API_URL;
 
+// const baseUrl = import.meta.env.VITE_API_URL;
+// fetch(${ baseUrl}/tips)
+
 export const getExperiences = () => fetch(`${BASE}/experiences`).then(res => res.json());
 export const postExperience = (form) =>
   fetch(`${BASE}/experiences`, {
