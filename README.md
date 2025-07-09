@@ -27,12 +27,17 @@ Features include:
 > Whether you're preparing for your first interview or mentoring others, TechTalks fosters a community built on transparency and growth.
 
 ---
-
 ## 🖥️ Live Demo
 
-🔗 **Frontend**: https://tech-talks-wheat.vercel.app/
-🔗 **Backend (API)**: https://tech-talks-1.onrender.com/ap
-> Try posting an experience or adding a question — no login required!
+Explore TechTalks live in action:
+
+| 🌐 Layer         | 🔗 Link                                           |
+|------------------|--------------------------------------------------|
+| **Frontend App** | [https://tech-talks-wheat.vercel.app](https://tech-talks-wheat.vercel.app) |
+| **Backend API**  | [https://tech-talks-1.onrender.com/api](https://tech-talks-1.onrender.com/api) |
+
+> 🧪 Try posting an experience, submitting a tip, or asking a question — no login required.  
+> 🛠️ All data flows in real-time from the hosted Flask backend to the deployed React frontend.
 
 ---
 
