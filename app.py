@@ -41,6 +41,9 @@ def questions():
     questions = Question.query.all()
     return jsonify([{'id':q.id,'question': q.question}for q in questions])
 
-if __name__ ==  '__main__':
-    app.run(debug = True)
+import os 
+
+if __name__ == '__main__':
+    port = int(os.environment.get('PORT', 5000))
+    app.run(debug = False, host = '0.0.0.0', port = port)
       
